@@ -6,10 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="annconfig" />
+        <module name="oracle" />
         <module name="sshm" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="annconfig" target="1.8" />
+      <module name="oracle" target="1.8" />
       <module name="sshm" target="1.8" />
     </bytecodeTargetLevel>
   </component>

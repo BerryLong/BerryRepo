@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="hrs@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+    <root id="1"/>
+    <schema id="2" parent="1" name="hrs">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="demo"/>
+    <schema id="4" parent="1" name="hello"/>
+    <schema id="5" parent="1" name="hibernate"/>
+    <schema id="6" parent="1" name="house"/>
+    <schema id="7" parent="1" name="information_schema"/>
+    <schema id="8" parent="1" name="mybatis"/>
+    <schema id="9" parent="1" name="mysql"/>
+    <schema id="10" parent="1" name="performance_schema"/>
+    <schema id="11" parent="1" name="sys"/>
+    <table id="12" parent="2" name="tb_dept"/>
+    <table id="13" parent="2" name="tb_emp"/>
+    <table id="14" parent="2" name="tb_user"/>
+    <routine id="15" parent="2" name="sp_getAvgSal">
+      <RoutineKind>procedure</RoutineKind>
+    </routine>
+    <column id="16" parent="12" name="dno">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="17" parent="12" name="dname">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="18" parent="12" name="dloc">
+      <Position>3</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="19" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>dno</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="20" parent="13" name="eno">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="21" parent="13" name="ename">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="22" parent="13" name="esex">
+      <Position>3</Position>
+      <DataType>bit(1)|0</DataType>
+      <DefaultExpression>b&apos;1&apos;</DefaultExpression>
+    </column>
+    <column id="23" parent="13" name="ejob">
+      <Position>4</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="24" parent="13" name="emgr">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="25" parent="13" name="esal">
+      <Position>6</Position>
+      <DataType>decimal(8,2)|0</DataType>
+    </column>
+    <column id="26" parent="13" name="ehiredate">
+      <Position>7</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="27" parent="13" name="estatus">
+      <Position>8</Position>
+      <DataType>bit(1)|0</DataType>
+      <DefaultExpression>b&apos;1&apos;</DefaultExpression>
+    </column>
+    <column id="28" parent="13" name="ephoto">
+      <Position>9</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="29" parent="13" name="etel">
+      <Position>10</Position>
+      <DataType>char(11)|0</DataType>
+    </column>
+    <column id="30" parent="13" name="dno">
+      <Position>11</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="31" parent="13" name="fk_emp_dno">
+      <ColNames>dno</ColNames>
+    </index>
+    <index id="32" parent="13" name="fk_emp_emgr">
+      <ColNames>emgr</ColNames>
+    </index>
+    <key id="33" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>eno</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="34" parent="13" name="fk_emp_emgr">
+      <ColNames>emgr</ColNames>
+      <RefSchemaName>hrs</RefSchemaName>
+      <RefTableName>tb_emp</RefTableName>
+      <RefColNames>eno</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <foreign-key id="35" parent="13" name="fk_emp_dno">
+      <ColNames>dno</ColNames>
+      <RefSchemaName>hrs</RefSchemaName>
+      <RefTableName>tb_dept</RefTableName>
+      <RefColNames>dno</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <column id="36" parent="14" name="username">
+      <Position>1</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="37" parent="14" name="password">
+      <Position>2</Position>
+      <DataType>char(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="38" parent="14" name="email">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="39" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>username</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <argument id="40" parent="15" name="dn">
+      <DataType>varchar(20)|0</DataType>
+    </argument>
+    <argument id="41" parent="15" name="avgSal">
+      <ArgumentDirection>O</ArgumentDirection>
+      <DataType>decimal(8,2)|0</DataType>
+    </argument>
+  </database-model>
+</dataSource>
