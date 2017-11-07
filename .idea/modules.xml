@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BerryRepo.iml" filepath="$PROJECT_DIR$/BerryRepo.iml" />
       <module fileurl="file://$PROJECT_DIR$/annconfig/annconfig.iml" filepath="$PROJECT_DIR$/annconfig/annconfig.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oracle/oracle.iml" filepath="$PROJECT_DIR$/oracle/oracle.iml" />
       <module fileurl="file://$PROJECT_DIR$/sshm/sshm.iml" filepath="$PROJECT_DIR$/sshm/sshm.iml" />
     </modules>
   </component>
