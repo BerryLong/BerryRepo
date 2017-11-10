@@ -2,18 +2,26 @@
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/annconfig" />
+    <file type="web" url="file://$PROJECT_DIR$/houseInfo" />
+    <file type="web" url="file://$PROJECT_DIR$/oracle" />
     <file type="web" url="file://$PROJECT_DIR$/sshm" />
+    <file type="web" url="file://$PROJECT_DIR$/test1706_lby" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/sshm/pom.xml" />
         <option value="$PROJECT_DIR$/annconfig/pom.xml" />
+        <option value="$PROJECT_DIR$/houseInfo/pom.xml" />
         <option value="$PROJECT_DIR$/oracle/pom.xml" />
+        <option value="$PROJECT_DIR$/test1706/pom.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_9" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="SvnBranchConfigurationManager">
+    <option name="mySupportsUserInfoFilter" value="true" />
   </component>
 </project>
