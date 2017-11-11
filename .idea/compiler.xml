@@ -10,6 +10,7 @@
         <module name="houseInfo" />
         <module name="oracle" />
         <module name="sshm" />
+        <module name="test1706" />
         <module name="test1706_lby" />
       </profile>
     </annotationProcessing>

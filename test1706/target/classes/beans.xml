@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+
+    <bean id="user" class="com.qq.test06.User" />
+
+    <bean id="userDao" class="com.qq.test06.UserDaoImpl" />
+
+    <bean id="userService" class="com.qq.test06.UserService">
+        <property name="userDao" bean="userDao" />
+    </bean>
+
+</beans>
