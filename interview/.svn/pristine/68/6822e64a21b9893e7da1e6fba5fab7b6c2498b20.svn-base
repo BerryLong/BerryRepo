@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>骆昊的技术专栏</title>
+	</head>
+	<body>
+		<h1>Hello, world!</h1>
+		<h2>你好世界!</h2>
+		<hr>
+		<form action="" method="post">
+			<div>
+				<input type="text" placeholder="请输入用户名" required>
+			</div>
+			<div>
+				<input type="password" placeholder="请输入密码" required>
+			</div>
+			<div>
+				<input type="date">
+			</div>
+			<div>
+				<input type="radio" name="sex" checked>男
+				<input type="radio" name="sex">女
+			</div>
+			<div>
+				<input type="checkbox" name="fav" checked>旅游
+				<input type="checkbox" name="fav">阅读
+				<input type="checkbox" name="fav" checked>运动
+				<input type="checkbox" name="fav">游戏
+			</div>
+			<div>
+				<select>
+					<option>北京</option>
+					<option>天津</option>
+					<option>上海</option>
+					<option>重庆</option>
+					<option>四川</option>
+					<option>云南</option>
+					<option>广西</option>
+					<option>贵州</option>
+				</select>
+			</div>
+			<div>
+				<input type="submit" value="注册">
+				<input type="reset" value="重置">
+			</div>
+		</form>
+		<a href="http://www.baidu.com" target="_blank">百度一下</a>
+		<a href="http://www.qq.com">QQ官网</a>
+		<p>从明天起</p>
+		<p>做一个幸福的人</p>
+		<p>喂马 劈柴</p>
+		<p>周游世界</p>
+		<video controls width="400">
+			<source src="hello.mov">
+		</video>
+		<audio controls>
+			<source src="宋冬野 - 董小姐.mp3">
+		</audio>
+		<img src="timg.jpg" height="100">
+		<img src="timg.jpg" height="200">
+		<img src="timg.jpg" height="400">
+		<ol>
+			<li>Apple</li>
+			<li>Grape</li>
+			<li>Banana</li>
+			<li>Strawberry</li>
+			<li>Pitaya</li>
+		</ol>
+		<table border="10">
+			<tr>
+				<td><td>
+				<th>第一节<th>
+				<th>第二节<th>
+				<th>第三节<th>
+				<th>第四节<th>
+			</tr>
+			<tr>
+				<th>星期一<th>
+				<td>语文<td>
+				<td>数学<td>
+				<td>美术<td>
+				<td>英语<td>
+			</tr>
+			<tr>
+				<th>星期二<th>
+				<td>英语<td>
+				<td>体育<td>
+				<td>数学<td>
+				<td>音乐<td>
+			</tr>
+		</table>
+	</body>
+</html>
+
