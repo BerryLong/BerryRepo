@@ -7,6 +7,7 @@
     <file type="web" url="file://$PROJECT_DIR$/sshm" />
     <file type="web" url="file://$PROJECT_DIR$/test1706" />
     <file type="web" url="file://$PROJECT_DIR$/test1706_lby" />
+    <type id="Spring" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -16,6 +17,7 @@
         <option value="$PROJECT_DIR$/houseInfo/pom.xml" />
         <option value="$PROJECT_DIR$/oracle/pom.xml" />
         <option value="$PROJECT_DIR$/test1706/pom.xml" />
+        <option value="$PROJECT_DIR$/mySpringBoot/pom.xml" />
       </list>
     </option>
   </component>

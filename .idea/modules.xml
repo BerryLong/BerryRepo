@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BerryRepo.iml" filepath="$PROJECT_DIR$/BerryRepo.iml" />
       <module fileurl="file://$PROJECT_DIR$/houseInfo/houseInfo.iml" filepath="$PROJECT_DIR$/houseInfo/houseInfo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mySpringBoot/mySpringBoot.iml" filepath="$PROJECT_DIR$/mySpringBoot/mySpringBoot.iml" />
       <module fileurl="file://$PROJECT_DIR$/oracle/oracle.iml" filepath="$PROJECT_DIR$/oracle/oracle.iml" />
       <module fileurl="file://$PROJECT_DIR$/sshm/sshm.iml" filepath="$PROJECT_DIR$/sshm/sshm.iml" />
       <module fileurl="file://$PROJECT_DIR$/test1706/test1706.iml" filepath="$PROJECT_DIR$/test1706/test1706.iml" />

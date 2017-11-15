@@ -33,7 +33,7 @@
 	</listener>
 	
 	<listener>
-		<listener-class>com.qq.houseInfo.listener.PreLoadDataListener</listener-class>
+		<listener-class>com.qq.test1706.houseInfo.listener.PreLoadDataListener</listener-class>
 	</listener>
 
 	<!-- 配置编码过滤器 -->

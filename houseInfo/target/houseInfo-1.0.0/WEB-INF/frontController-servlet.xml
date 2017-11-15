@@ -15,7 +15,7 @@
 	<mvc:interceptors>
 		<mvc:interceptor>
 			<mvc:mapping path="/toPub" />
-			<bean class="com.qq.houseInfo.interceptor.LoginInterceptor" />
+			<bean class="com.qq.test1706.houseInfo.interceptor.LoginInterceptor" />
 		</mvc:interceptor>
 	</mvc:interceptors>
 
