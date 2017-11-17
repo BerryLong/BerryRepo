@@ -1,26 +1,19 @@
 package com.qq;
 
-class Annoyance extends Exception {
-}
+import com.qq.view.AirIndexExcelView;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 
-class Sneeze extends Annoyance {
-}
-
+@SpringBootApplication
 public class App {
 
-    public static void main(String[] args) throws Exception {
-        try {
-            try {
-                throw new Sneeze();
-            } catch (Annoyance a) {
-                System.out.println("Caught Annoyance");
-                throw a;
-            }
-        } catch (Sneeze s) {
-            System.out.println("Caught Sneeze");
-            return;
-        } finally {
-            System.out.println("Hello World!");
-        }
+    @Bean
+    public AirIndexExcelView excelView() {
+        return new AirIndexExcelView();
+    }
+
+    public static void main(String[] args) {
+        SpringApplication.run(App.class);
     }
 }

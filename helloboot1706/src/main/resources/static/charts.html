@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Charts</title>
+</head>
+<body>
+    <div id="main" style="width: 600px; height: 400px;"></div>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/echarts/3.8.4/echarts.min.js"></script>
+    <script>
+        $(function() {
+            var chart = echarts.init($('#main')[0]);
+            var lineStyle = {
+                normal: {
+                    width: 1,
+                    opacity: 0.5
+                }
+            };
+            var schema = [
+                {name: 'date', index: 0, text: '日期'},
+                {name: 'AQIindex', index: 1, text: 'AQI'},
+                {name: 'PM25', index: 2, text: 'PM2.5'},
+                {name: 'PM10', index: 3, text: 'PM10'},
+                {name: 'CO', index: 4, text: ' CO'},
+                {name: 'NO2', index: 5, text: 'NO2'},
+                {name: 'SO2', index: 6, text: 'SO2'},
+                {name: '等级', index: 7, text: '等级'}
+            ];
+            var option = {
+                backgroundColor: '#333',
+                legend: {
+                    bottom: 30,
+                    data: ['北京', '上海', '广州'],
+                    itemGap: 20,
+                    textStyle: {
+                        color: '#fff',
+                        fontSize: 14
+                    }
+                },
+                tooltip: {
+                    padding: 10,
+                    backgroundColor: '#222',
+                    borderColor: '#777',
+                    borderWidth: 1,
+                    formatter: function (obj) {
+                        var value = obj[0].value;
+                        return '<div style="border-bottom: 1px solid rgba(255,255,255,.3); font-size: 18px;padding-bottom: 7px;margin-bottom: 7px">'
+                            + obj[0].seriesName + ' ' + value[0] + '日期：'
+                            + value[7]
+                            + '</div>'
+                            + schema[1].text + '：' + value[1] + '<br>'
+                            + schema[2].text + '：' + value[2] + '<br>'
+                            + schema[3].text + '：' + value[3] + '<br>'
+                            + schema[4].text + '：' + value[4] + '<br>'
+                            + schema[5].text + '：' + value[5] + '<br>'
+                            + schema[6].text + '：' + value[6] + '<br>';
+                    }
+                },
+                // dataZoom: {
+                //     show: true,
+                //     orient: 'vertical',
+                //     parallelAxisIndex: [0]
+                // },
+                parallelAxis: [
+                    {dim: 0, name: schema[0].text, inverse: true, max: 31, nameLocation: 'start'},
+                    {dim: 1, name: schema[1].text},
+                    {dim: 2, name: schema[2].text},
+                    {dim: 3, name: schema[3].text},
+                    {dim: 4, name: schema[4].text},
+                    {dim: 5, name: schema[5].text},
+                    {dim: 6, name: schema[6].text},
+                    {dim: 7, name: schema[7].text,
+                        type: 'category', data: ['优', '良', '轻度污染', '中度污染', '重度污染', '严重污染']}
+                ],
+                visualMap: {
+                    show: true,
+                    min: 0,
+                    max: 150,
+                    dimension: 2,
+                    inRange: {
+                        color: ['#d94e5d','#eac736','#50a3ba'].reverse(),
+                        // colorAlpha: [0, 1]
+                    }
+                },
+                parallel: {
+                    left: '5%',
+                    right: '18%',
+                    bottom: 100,
+                    parallelAxisDefault: {
+                        type: 'value',
+                        name: 'AQI指数',
+                        nameLocation: 'end',
+                        nameGap: 20,
+                        nameTextStyle: {
+                            color: '#fff',
+                            fontSize: 12
+                        },
+                        axisLine: {
+                            lineStyle: {
+                                color: '#aaa'
+                            }
+                        },
+                        axisTick: {
+                            lineStyle: {
+                                color: '#777'
+                            }
+                        },
+                        splitLine: {
+                            show: false
+                        },
+                        axisLabel: {
+                            textStyle: {
+                                color: '#fff'
+                            }
+                        }
+                    }
+                },
+                series: [
+                    {
+                        name: '北京',
+                        type: 'parallel',
+                        lineStyle: lineStyle
+                    },
+                    {
+                        name: '上海',
+                        type: 'parallel',
+                        lineStyle: lineStyle
+                    },
+                    {
+                        name: '广州',
+                        type: 'parallel',
+                        lineStyle: lineStyle
+                    }
+                ]
+            };
+            +function () {
+                var fn = arguments.callee;
+                // 这种做法称为Ajax轮询 服务器压力较大
+                // 更好的做法是由服务器主动推送数据 - WebSocket
+                $.getJSON('air', function (json) {
+                   var cities = [ ];
+                   for (var i = 0; i < json.length; ++i) {
+                       var city = json[i];
+                       var dataCity = [ ];
+                       for (var j = 0; j < city.length; ++j) {
+                           var airIndex = city[j];
+                           var temp = [ ];
+                           temp[0] = airIndex.day;
+                           temp[1] = airIndex.aqi;
+                           temp[2] = airIndex.pm25;
+                           temp[3] = airIndex.pm10;
+                           temp[4] = airIndex.co;
+                           temp[5] = airIndex.no2;
+                           temp[6] = airIndex.so2;
+                           temp[7] = airIndex.level;
+                           dataCity[j] = temp;
+                       }
+                       cities[i] = dataCity;
+                   }
+                   for (var i = 0; i < option.series.length; ++i) {
+                       option.series[i].data = cities[i];
+                   }
+                   chart.setOption(option);
+                   var mills = parseInt(Math.random() * 2001 + 4000);
+                   window.setTimeout(fn, mills);
+                });
+            }();
+        });
+    </script>
+</body>
+</html>
