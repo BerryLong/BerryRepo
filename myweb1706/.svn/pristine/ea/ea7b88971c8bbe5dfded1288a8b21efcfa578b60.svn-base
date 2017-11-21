@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    服务器说: <span id="message"></span>
+    <script>
+        var ws = new WebSocket("ws://" + window.location.host + "/ws/say");
+        ws.onmessage = function(evt) {
+            document.getElementById("message").textContent = evt.data;
+        };
+    </script>
+</body>
+</html>

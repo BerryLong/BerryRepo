@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <style>
+        #hello {  position: fixed;  left: -1000px;  top: -1000px;  }
+    </style>
+</head>
+<body>
+    服务器说: <span id="message"></span>
+    <iframe src="hello" id="hello"></iframe>
+    <script>
+        var span = document.getElementById("message");
+        var iframe = document.getElementById("hello");
+        iframe.onload = function(evt) {
+            span.textContent = evt.target.contentDocument.body.textContent;
+            evt.target.src = "hello?" + Math.random();
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <style>
+        #hello {  position: fixed;  left: -1000px;  top: -1000px;  }
+    </style>
+</head>
+<body>
+    <input type="text" id="msgToServer"/>
+    <button id="sendButton">send</button>
+    服务器说: <span id="message"></span>
+    <iframe src="hello" id="hello"></iframe>
+    <script>
+        var ws = new WebSocket("ws://localhost:8080/ws/echo");
+        ws.onmessage = function (evt) {
+            document.getElementById("message").textContent = evt.data;
+        };
+        var sendButton = document.getElementById("sendButton");
+        sendButton.onclick = function () {
+            var msg = document.getElementById("msgToServer");
+            ws.send(msg);
+        };
+    </script>
+</body>
+</html>
