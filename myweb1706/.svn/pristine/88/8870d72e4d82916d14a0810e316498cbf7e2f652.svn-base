@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <style>
+        #hello {  position: fixed;  left: -1000px;  top: -1000px;  }
+    </style>
+</head>
+<body>
+    <input type="text" id="msgToServer">
+    <button id="sendButton">发送</button>
+    服务器说: <span id="message"></span>
+    <script>
+        var ws = new WebSocket("ws://localhost:8080/ws/echo");
+        ws.onmessage = function(evt) {
+            document.getElementById("message").textContent = evt.data;
+        };
+        var sendButton = document.getElementById("sendButton");
+        sendButton.onclick = function() {
+           var msg = document.getElementById("msgToServer").value;
+           ws.send(msg);
+        };
+    </script>
+</body>
+</html>

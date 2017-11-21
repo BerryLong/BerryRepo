@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/oracle/oracle.iml" filepath="$PROJECT_DIR$/oracle/oracle.iml" />
       <module fileurl="file://$PROJECT_DIR$/sshm/sshm.iml" filepath="$PROJECT_DIR$/sshm/sshm.iml" />
       <module fileurl="file://$PROJECT_DIR$/test1706/test1706.iml" filepath="$PROJECT_DIR$/test1706/test1706.iml" />
+      <module fileurl="file://$PROJECT_DIR$/websocket/websocket.iml" filepath="$PROJECT_DIR$/websocket/websocket.iml" />
     </modules>
   </component>
 </project>
