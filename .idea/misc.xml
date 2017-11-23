@@ -18,6 +18,8 @@
         <option value="$PROJECT_DIR$/oracle/pom.xml" />
         <option value="$PROJECT_DIR$/test1706/pom.xml" />
         <option value="$PROJECT_DIR$/mySpringBoot/pom.xml" />
+        <option value="$PROJECT_DIR$/serviceaccessor/pom.xml" />
+        <option value="$PROJECT_DIR$/callApi/pom.xml" />
       </list>
     </option>
   </component>

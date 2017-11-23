@@ -7,9 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="annconfig" />
+        <module name="callApi" />
         <module name="houseInfo" />
         <module name="mySpringBoot" />
         <module name="oracle" />
+        <module name="service-accessor" />
         <module name="sshm" />
         <module name="test1706" />
         <module name="test1706_lby" />
@@ -17,9 +19,12 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="annconfig" target="1.8" />
+      <module name="callApi" target="1.8" />
+      <module name="cxfClient" target="1.8" />
       <module name="houseInfo" target="1.8" />
       <module name="mySpringBoot" target="1.8" />
       <module name="oracle" target="1.8" />
+      <module name="service-accessor" target="1.8" />
       <module name="sshm" target="1.8" />
       <module name="test1706" target="1.8" />
       <module name="test1706_lby" target="1.8" />

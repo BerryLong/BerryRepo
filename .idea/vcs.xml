@@ -2,7 +2,9 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/callApi" vcs="svn" />
     <mapping directory="$PROJECT_DIR$/mySpringBoot" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/serviceaccessor" vcs="svn" />
     <mapping directory="$PROJECT_DIR$/test1706" vcs="svn" />
     <mapping directory="$PROJECT_DIR$/websocket" vcs="svn" />
   </component>

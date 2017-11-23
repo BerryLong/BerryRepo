@@ -5,6 +5,8 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/helloboot1706/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/helloboot1706/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/serviceaccessor/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/serviceaccessor/src/main/resources" type="java-resource" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -18,5 +20,7 @@
     <orderEntry type="library" name="Maven: org.springframework.data:spring-data-jpa:1.11.7.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: javax.transaction:javax.transaction-api:1.2" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-beans:4.3.10.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-messaging:4.3.11.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.8.0" level="project" />
   </component>
 </module>

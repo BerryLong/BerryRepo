@@ -5,11 +5,25 @@
     <title>Charts</title>
 </head>
 <body>
+    <button id="addButton">添加</button>
     <div id="main" style="width: 600px; height: 400px;"></div>
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/echarts/3.8.4/echarts.min.js"></script>
     <script>
         $(function() {
+            $('#addButton').on('click', function() {
+                $.ajax({
+                    url: 'dept',
+                    data: { 'no': 50, 'name': '搞事部', 'location': '上海' },
+                    type: 'post',
+                    dataType: 'json',
+                    success: function(json) {
+                        console.log(json);
+                    }
+                });
+            });
+
+
             var chart = echarts.init($('#main')[0]);
             var lineStyle = {
                 normal: {
